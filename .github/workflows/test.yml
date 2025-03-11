@@ -1,0 +1,19 @@
+name: Run Python Tests
+
+on: [push, pull_request]  # Runs on every push or PR
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3  # Clones your repo
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'  # Change Python version if needed
+
+      - name: Run Test
+        run: python test_script.py  # Runs the Python script
