@@ -17,3 +17,6 @@ jobs:
 
       - name: Run Test
         run: python test_script.py  # Runs the Python script
+
+        assert add(2, 3) == 6  # This will cause the test to fail
+
